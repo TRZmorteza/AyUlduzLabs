@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayulduz Labs</title>
+    <link rel="icon" href="img/logo_main.png" />
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ══════════════ NAV ══════════════ -->
+    <nav id="nav">
+      <a href="#hero" class="nav-logo">
+        <!-- AYuLDUZLABS LOGO — A crescent wrapping an alef letterform with star -->
+        <img class="base" src="img/trans-logo.png" alt="not found" />
+        <img class="white" src="img/trans-logo.png" alt="not found" />
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li>
+            <a href="#services"
+              ><span class="fa-inline">خدمات</span
+              ><span class="en-inline">Services</span></a
+            >
+          </li>
+          <li>
+            <a href="#projects"
+              ><span class="fa-inline">پروژه‌ها</span
+              ><span class="en-inline">Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="#team"
+              ><span class="fa-inline">تیم</span
+              ><span class="en-inline">Team</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><span class="fa-inline">تماس</span
+              ><span class="en-inline">Contact</span></a
+            >
+          </li>
+        </ul>
+        <button
+          id="lang-btn"
+          onclick="toggleLang()"
+          aria-label="Toggle language"
+        >
+          <span class="dot"></span>
+          <span class="fa-inline">EN</span>
+          <span class="en-inline">FA · فارسی</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section id="hero">
+      <canvas id="starfield"></canvas>
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-logo-wrap">
+          <img class="base" src="img/trans-logo.png" alt="" />
+          <img class="white" src="img/trans-logo.png" alt="not found" />
+        </div>
+
+        <p class="hero-eyebrow">ENGINEER . AUTOMATE . INNOVATE</p>
+
+        <!-- FA title -->
+        <h1 class="hero-title fa">
+          نرم‌افزار <span class="ac">هوشمند</span><br />برای کسب‌وکار شما
+        </h1>
+        <!-- EN title -->
+        <h1 class="hero-title en">
+          Intelligent software<br />for <span class="ac">real problems.</span>
+        </h1>
+
+        <!-- FA sub -->
+        <p class="hero-sub fa">
+          تیمی متخصص در توسعه وب، اتوماسیون هوشمند، بینایی ماشین و برنامه‌های
+          دسکتاپ — از کد تا راه‌اندازی.
+        </p>
+        <!-- EN sub -->
+        <p class="hero-sub en">
+          An Iranian team building web platforms, RPA pipelines, computer vision
+          systems, and desktop applications — end to end.
+        </p>
+
+        <div class="hero-stack">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">PHP</span>
+          <span class="stack-pill">MySQL</span>
+          <span class="stack-pill">YOLO V8</span>
+          <span class="stack-pill">RPA Systems</span>
+          <span class="stack-pill">AI</span>
+          <span class="stack-pill">REST API</span>
+        </div>
+
+        <a href="#projects" class="btn-primary">
+          <span class="fa-inline">مشاهده پروژه‌ها</span>
+          <span class="en-inline">View Our Work</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════════ SERVICES ══════════════ -->
+    <section id="services" class="sec sec-alt">
+      <div class="sec-head">
+        <p class="sec-eye">
+          <span class="fa-inline">خدمات ما</span
+          ><span class="en-inline">What We Build</span>
+        </p>
+        <h2 class="sec-title">
+          <span class="fa">تخصص‌های ما</span>
+          <span class="en">Our Expertise</span>
+        </h2>
+        <div class="rule"></div>
+        <p class="sec-desc">
+          <span class="fa"
+            >چهار حوزه تخصصی که در آن‌ها عمیق‌ترین تجربه داریم.</span
+          >
+          <span class="en"
+            >Four disciplines we've gone deep in — no generalist
+            hand-waving.</span
+          >
+        </p>
+      </div>
+
+      <div class="svc-grid">
+        <div class="svc-card reveal">
+          <svg class="svc-icon" viewBox="0 0 46 46" fill="none">
+            <rect
+              x="5"
+              y="8"
+              width="36"
+              height="26"
+              rx="3"
+              stroke="#3D8EF5"
+              stroke-width="1.4"
+            />
+            <path
+              d="M5 14H41"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+              opacity=".4"
+            />
+            <circle cx="10" cy="11" r="1.2" fill="#3D8EF5" opacity=".6" />
+            <circle cx="14.5" cy="11" r="1.2" fill="#3D8EF5" opacity=".4" />
+            <path
+              d="M14 22L18 26L26 18"
+              stroke="#3D8EF5"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M16 34L23 38L30 34"
+              stroke="#1D4068"
+              stroke-width="1.4"
+              stroke-linecap="round"
+            />
+          </svg>
+          <h3>
+            <span class="fa">توسعه وب</span
+            ><span class="en">Web Development</span>
+          </h3>
+          <p>
+            <span class="fa"
+              >وب‌سایت‌های سریع، واکنش‌گرا و بدون فریم‌ورک — HTML خالص، CSS و
+              JavaScript.</span
+            >
+            <span class="en"
+              >Fast, responsive sites with zero framework overhead — pure HTML,
+              CSS, and vanilla JS.</span
+            >
+          </p>
+          <div class="svc-tags">
+            <span class="svc-tag">HTML/CSS/JS</span>
+            <span class="svc-tag">PHP Backend</span>
+            <span class="svc-tag">MySQL</span>
+            <span class="svc-tag">REST API</span>
+          </div>
+        </div>
+
+        <div class="svc-card reveal">
+          <svg class="svc-icon" viewBox="0 0 46 46" fill="none">
+            <rect
+              x="6"
+              y="10"
+              width="22"
+              height="28"
+              rx="3"
+              stroke="#3D8EF5"
+              stroke-width="1.4"
+            />
+            <path
+              d="M10 16H24M10 20H20M10 24H22M10 28H18"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              opacity=".5"
+            />
+            <circle cx="35" cy="20" r="6" stroke="#3D8EF5" stroke-width="1.4" />
+            <path
+              d="M35 17V20L37 22"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M30 29L28 38M40 29L42 38"
+              stroke="#1D4068"
+              stroke-width="1.4"
+              stroke-linecap="round"
+            />
+            <path
+              d="M27 38H43"
+              stroke="#3D8EF5"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              opacity=".4"
+            />
+          </svg>
+          <h3>
+            <span class="fa">اتوماسیون و RPA</span
+            ><span class="en">RPA & Automation</span>
+          </h3>
+          <p>
+            <span class="fa"
+              >اتوماسیون فرآیندهای تکراری با Python — از اسکرپینگ تا ادغام
+              سیستم‌های سازمانی.</span
+            >
+            <span class="en"
+              >Python-driven automation of repetitive workflows — scraping,
+              scheduling, ERP sync, and beyond.</span
+            >
+          </p>
+          <div class="svc-tags">
+            <span class="svc-tag">Python</span>
+            <span class="svc-tag">Selenium</span>
+            <span class="svc-tag">Playwright</span>
+            <span class="svc-tag">Task Scheduler</span>
+          </div>
+        </div>
+
+        <div class="svc-card reveal">
+          <svg class="svc-icon" viewBox="0 0 46 46" fill="none">
+            <rect
+              x="6"
+              y="8"
+              width="34"
+              height="26"
+              rx="3"
+              stroke="#3D8EF5"
+              stroke-width="1.4"
+            />
+            <!-- Eye -->
+            <ellipse
+              cx="23"
+              cy="21"
+              rx="9"
+              ry="6"
+              stroke="#3D8EF5"
+              stroke-width="1.3"
+            />
+            <circle
+              cx="23"
+              cy="21"
+              r="3"
+              fill="rgba(61,142,245,0.15)"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+            />
+            <circle cx="23" cy="21" r="1.2" fill="#3D8EF5" />
+            <!-- Corner marks -->
+            <path
+              d="M8 10L11 10M8 10L8 13"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              opacity=".5"
+            />
+            <path
+              d="M38 10L35 10M38 10L38 13"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              opacity=".5"
+            />
+            <path
+              d="M8 32L11 32M8 32L8 29"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              opacity=".5"
+            />
+            <path
+              d="M38 32L35 32M38 32L38 29"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              opacity=".5"
+            />
+            <path
+              d="M16 38L23 42L30 38"
+              stroke="#1D4068"
+              stroke-width="1.4"
+              stroke-linecap="round"
+            />
+          </svg>
+          <h3>
+            <span class="fa">بینایی ماشین</span
+            ><span class="en">Computer Vision</span>
+          </h3>
+          <p>
+            <span class="fa"
+              >تشخیص اشیاء با YOLOv8 و OCR سفارشی برای استخراج داده از تصاویر و
+              ویدئو در زمان واقعی.</span
+            >
+            <span class="en"
+              >Object detection with YOLOv8 and custom-trained OCR models for
+              real-time image and video analysis.</span
+            >
+          </p>
+          <div class="svc-tags">
+            <span class="svc-tag">YOLOv8</span>
+            <span class="svc-tag">Custom OCR</span>
+            <span class="svc-tag">OpenCV</span>
+            <span class="svc-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="svc-card reveal">
+          <svg class="svc-icon" viewBox="0 0 46 46" fill="none">
+            <rect
+              x="8"
+              y="6"
+              width="30"
+              height="34"
+              rx="3"
+              stroke="#3D8EF5"
+              stroke-width="1.4"
+            />
+            <path
+              d="M8 12H38"
+              stroke="#3D8EF5"
+              stroke-width="1.2"
+              opacity=".4"
+            />
+            <circle cx="12" cy="9" r="1.2" fill="#3D8EF5" opacity=".5" />
+            <circle cx="16" cy="9" r="1.2" fill="#3D8EF5" opacity=".3" />
+            <rect
+              x="13"
+              y="18"
+              width="20"
+              height="14"
+              rx="2"
+              fill="rgba(61,142,245,0.07)"
+              stroke="rgba(61,142,245,0.3)"
+              stroke-width="1"
+            />
+            <path
+              d="M17 22L20 25L29 17"
+              stroke="#3D8EF5"
+              stroke-width="1.3"
+              stroke-linecap="round"
+            />
+          </svg>
+          <h3>
+            <span class="fa">برنامه‌های دسکتاپ</span
+            ><span class="en">Desktop Applications</span>
+          </h3>
+          <p>
+            <span class="fa"
+              >نرم‌افزار ویندوزی با Python — رابط کاربری سفارشی، دسترسی به فایل
+              سیستم، و اجرای آفلاین.</span
+            >
+            <span class="en"
+              >Windows desktop apps in Python — custom GUI, filesystem access,
+              offline-capable, production-grade.</span
+            >
+          </p>
+          <div class="svc-tags">
+            <span class="svc-tag">Python</span>
+            <span class="svc-tag">PyQt6</span>
+            <span class="svc-tag">Tkinter</span>
+            <span class="svc-tag">Windows</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROJECTS ══════════════ -->
+    <section id="projects" class="sec">
+      <div class="sec-head">
+        <p class="sec-eye">
+          <span class="fa-inline">نمونه کارها</span
+          ><span class="en-inline">Portfolio</span>
+        </p>
+        <h2 class="sec-title">
+          <span class="fa">پروژه‌های انجام‌شده</span>
+          <span class="en">Previous Projects</span>
+        </h2>
+        <div class="rule"></div>
+        <p class="sec-desc">
+          <span class="fa"
+            >نمونه‌ای از کارهایی که به آن‌ها افتخار می‌کنیم.</span
+          >
+          <span class="en"
+            >A selection of work we're proud to put our name on.</span
+          >
+        </p>
+      </div>
+
+      <div class="proj-grid">
+        <div class="swiper mySwiper" dir="rtl">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="proj-card c7 reveal">
+                <div class="project_img">
+                  <img src="img/project_img_dashbourd.png" alt="" />
+                </div>
+                <div class="proj-body backGr">
+                  <p class="proj-tag">Web Application · Admin Panel</p>
+                  <h3>
+                    <span class="fa">پنل مدیریت اسکرپر</span
+                    ><span class="en">Scraper Admin Dashboard</span>
+                  </h3>
+                  <p>
+                    <span class="fa"
+                      >پنل PHP برای مانیتورینگ اسکرپرهای Python، لاگ‌های اجرا،
+                      وضعیت کارها و خروجی داده MySQL.</span
+                    >
+                    <span class="en"
+                      >PHP admin panel monitoring Python scraper jobs, execution
+                      logs, task status, and MySQL data output in real
+                      time.</span
+                    >
+                  </p>
+                  <div class="proj-techs">
+                    <span class="t-tag">PHP</span
+                    ><span class="t-tag">MySQL</span
+                    ><span class="t-tag">Python</span
+                    ><span class="t-tag">Cron</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="proj-card c7 reveal">
+                <div class="project_img">
+                  <img src="img/project_img_dashbourd.png" alt="" />
+                </div>
+                <div class="proj-body backGr">
+                  <p class="proj-tag">Web Application · Admin Panel</p>
+                  <h3>
+                    <span class="fa">پنل مدیریت اسکرپر</span
+                    ><span class="en">Scraper Admin Dashboard</span>
+                  </h3>
+                  <p>
+                    <span class="fa"
+                      >پنل PHP برای مانیتورینگ اسکرپرهای Python، لاگ‌های اجرا،
+                      وضعیت کارها و خروجی داده MySQL.</span
+                    >
+                    <span class="en"
+                      >PHP admin panel monitoring Python scraper jobs, execution
+                      logs, task status, and MySQL data output in real
+                      time.</span
+                    >
+                  </p>
+                  <div class="proj-techs">
+                    <span class="t-tag">PHP</span
+                    ><span class="t-tag">MySQL</span
+                    ><span class="t-tag">Python</span
+                    ><span class="t-tag">Cron</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="proj-card c7 reveal">
+                <div class="project_img">
+                  <img src="img/project_img_dashbourd.png" alt="" />
+                </div>
+                <div class="proj-body backGr">
+                  <p class="proj-tag">Web Application · Admin Panel</p>
+                  <h3>
+                    <span class="fa">پنل مدیریت اسکرپر</span
+                    ><span class="en">Scraper Admin Dashboard</span>
+                  </h3>
+                  <p>
+                    <span class="fa"
+                      >پنل PHP برای مانیتورینگ اسکرپرهای Python، لاگ‌های اجرا،
+                      وضعیت کارها و خروجی داده MySQL.</span
+                    >
+                    <span class="en"
+                      >PHP admin panel monitoring Python scraper jobs, execution
+                      logs, task status, and MySQL data output in real
+                      time.</span
+                    >
+                  </p>
+                  <div class="proj-techs">
+                    <span class="t-tag">PHP</span
+                    ><span class="t-tag">MySQL</span
+                    ><span class="t-tag">Python</span
+                    ><span class="t-tag">Cron</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination project"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ TEAM ══════════════ -->
+    <section id="team" class="sec sec-alt">
+      <div class="sec-head">
+        <p class="sec-eye">
+          <span class="fa-inline">اعضای تیم</span
+          ><span class="en-inline">The People</span>
+        </p>
+        <h2 class="sec-title">
+          <span class="fa">تیم ما</span>
+          <span class="en">Our Team</span>
+        </h2>
+        <div class="rule"></div>
+        <p class="sec-desc">
+          <span class="fa">
+            کوچک اما متخصص — مهندس، طراح و متخصص اتوماسیون.</span
+          >
+          <span class="en"
+            >A small, skilled Iranian crew — engineers, designers, and
+            automation specialists who care about craft.</span
+          >
+        </p>
+      </div>
+      <div class="team-grid">
+        <div class="member reveal">
+          <div class="avatar">
+            <img src="porsanel/morteza_prof.jpg" alt="MN" />
+          </div>
+          <h3 class="fa">مرتضی نوعی</h3>
+          <h3 class="en">Morteza Noei</h3>
+          <p class="member-role">Founder · Full-Stack</p>
+          <p>
+            <span class="fa"
+              >معمار سیستم‌ها و توسعه‌دهنده ارشد Python و PHP.</span
+            ><span class="en"
+              >Systems architect, senior Python & PHP developer.</span
+            >
+          </p>
+        </div>
+
+        <div class="member reveal">
+          <div class="avatar">
+            <img
+              class="white"
+              src="porsanel/logo_main-Photoroom.png"
+              alt="img/site-logo.png"
+            />
+            <img
+              class="base"
+              src="porsanel/logo_main-Photoroom.png"
+              alt="img/site-logo.png"
+            />
+          </div>
+          <h3>صدرا گلزاری</h3>
+          <p class="member-role">Back-end</p>
+          <p>
+            <span class="fa"
+              >توسعه‌دهنده بک‌اند با تخصص در PHP و Python و طراحی API‌های
+              مقیاس‌پذیر.</span
+            ><span class="en"
+              >Back-end developer specialising in PHP, Python & scalable API
+              design.</span
+            >
+          </p>
+        </div>
+
+        <div class="member reveal">
+          <div class="avatar">
+            <img src="porsanel/amin_prof.jpg" alt="MN" />
+          </div>
+          <h3>امین خسروشاهی</h3>
+          <p class="member-role">Front-end</p>
+          <p>
+            <span class="fa"
+              >توسعه‌دهنده فرانت‌اند متخصص در React و Node.js با تمرکز بر
+              رابط‌های کاربری روان.</span
+            ><span class="en"
+              >Front-end developer specialising in React & Node.js, focused on
+              smooth user interfaces.</span
+            >
+          </p>
+        </div>
+
+        <div class="member reveal">
+          <div class="avatar">
+            <img src="porsanel/faeze_prof.jpg" alt="MN" />
+          </div>
+          <h3>فایزه خراسانی</h3>
+          <p class="member-role">UI/UX Design</p>
+          <p>
+            <span class="fa"
+              >طراح UI/UX با تمرکز بر تجربه کاربری، نمونه‌سازی تعاملی و
+              سیستم‌های طراحی.</span
+            >
+            <span class="en"
+              >UI/UX designer focused on user research, interactive prototyping
+              & design systems.
+              </span
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer id="contact">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="#hero" class="nav-logo">
+            <img class="base" src="img/trans-logo.png" alt="not found" />
+            <img class="white" src="img/trans-logo.png" alt="not found" />
+            <span class="nav-logo-text">Ayulduzlabs</span>
+          </a>
+          <p>
+            <span class="fa"
+              >آیولدوز لبز — تیم ایرانی توسعه نرم‌افزار. از وب تا اتوماسیون، از
+              بینایی ماشین تا دسکتاپ.</span
+            >
+            <span class="en"
+              >Ayulduzlabs — Iranian software team. Web to automation, computer
+              vision to desktop apps.</span
+            >
+          </p>
+        </div>
+
+        <div class="foot-col">
+          <h4>
+            <span class="fa">تماس با ما</span><span class="en">Contact</span>
+          </h4>
+          <ul>
+            <!-- <li>
+              <svg
+                class="foot-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#3D8EF5"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.14 2.22 2 2 0 012.12 0h3a2 2 0 012 1.72 12.8 12.8 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.8 12.8 0 002.81.7A2 2 0 0122 14.92v2z"
+                />
+              </svg>
+              <a href="tel:+989121234567" dir="ltr">+98 912 123 4567</a>
+            </li> -->
+            <li>
+              <svg
+                class="foot-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#3D8EF5"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M22 7l-10 7L2 7" />
+              </svg>
+              <a href="mailto:hello@ayulduzlabs.ir">hello@ayulduzlabs.ir</a>
+            </li>
+            <li>
+              <svg
+                class="foot-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#3D8EF5"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M22 7l-10 7L2 7" />
+              </svg>
+              <a href="mailto:projects@ayulduzlabs.ir"
+                >projects@ayulduzlabs.ir</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>
+            <span class="fa">شبکه‌های اجتماعی</span
+            ><span class="en">Social</span>
+          </h4>
+          <div class="socials">
+            <a href="#" class="soc-btn" aria-label="Instagram">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#3D8EF5"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="#3D8EF5" stroke="none" />
+              </svg>
+            </a>
+            <a href="#" class="soc-btn" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21.8 2.4L1.4 10.2C0 10.8 0 11.8 1.2 12.2L6.4 13.9L18.6 5.8C19.2 5.4 19.8 5.6 19.4 6.1L9.2 15.4L8.9 20.8C9.4 20.8 9.6 20.6 9.9 20.3L12.6 17.5L17.9 21.6C18.9 22.2 19.6 21.8 19.9 20.6L23.4 4.2C23.8 2.6 22.9 1.9 21.8 2.4Z"
+                  fill="#3D8EF5"
+                  opacity=".9"
+                />
+              </svg>
+            </a>
+          </div>
+          <ul>
+            <li>
+              <svg
+                class="foot-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21.8 2.4L1.4 10.2C0 10.8 0 11.8 1.2 12.2L6.4 13.9L18.6 5.8C19.2 5.4 19.8 5.6 19.4 6.1L9.2 15.4L8.9 20.8C9.4 20.8 9.6 20.6 9.9 20.3L12.6 17.5L17.9 21.6C18.9 22.2 19.6 21.8 19.9 20.6L23.4 4.2C23.8 2.6 22.9 1.9 21.8 2.4Z"
+                  fill="#3D8EF5"
+                  opacity=".7"
+                />
+              </svg>
+              <a href="https://t.me/ayulduzlabs" dir="ltr">@ayulduzlabs</a>
+            </li>
+            <li>
+              <svg
+                class="foot-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#3D8EF5"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+              </svg>
+              <a href="https://instagram.com/ayulduzlabs" dir="ltr"
+                >@ayulduzlabs</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <span>© ۱۴۰۴ - Ayulduzlabs 2025</span>
+      </div>
+    </footer>
+
+    <!-- ══════════════ JS ══════════════ -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
