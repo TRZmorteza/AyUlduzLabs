@@ -883,6 +883,30 @@ html[lang="fa"] .foot-col h4 {
   .nav-links {
     display: none;
   }
+  .preloader-text {
+    font-size: 1.8rem !important;
+    letter-spacing: 3px !important;
+  }
+
+    .smoke-1 {
+    width: 120vw;
+    height: 120vw;
+  }
+
+  .smoke-2 {
+    width: 130vw;
+    height: 130vw;
+  }
+
+  .smoke-3 {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .smoke-4 {
+    width: 80vw;
+    height: 80vw;
+  }
 }
 
 

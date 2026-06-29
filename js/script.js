@@ -122,7 +122,7 @@ function animateVisibleSlides(swiper) {
 document.addEventListener("DOMContentLoaded", function () {
   var preloader = document.getElementById("preloader");
   var preloaderText = document.getElementById("preloader-text");
-  var text = 'Ay UlduzLabs';
+  var text = preloaderText.innerText.trim();
 
   preloaderText.innerHTML = "";
 
