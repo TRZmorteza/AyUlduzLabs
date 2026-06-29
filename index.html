@@ -15,6 +15,21 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+<div class="site-preloader" id="preloader">
+  <!-- smoke effects -->
+  <div class="smoke-container">
+    <div class="smoke smoke-1"></div>
+    <div class="smoke smoke-2"></div>
+    <div class="smoke smoke-3"></div>
+    <div class="smoke smoke-4"></div>
+  </div>
+
+  <!-- text MUST be inside the preloader div -->
+  <div class="preloader-content">
+    <h1 class="preloader-text" id="preloader-text">Ay UlduzLabs</h1>
+  </div>
+
+</div> 
     <!-- ══════════════ NAV ══════════════ -->
     <nav id="nav">
       <a href="#hero" class="nav-logo">
@@ -63,7 +78,7 @@
     </nav>
 
     <!-- ══════════════ HERO ══════════════ -->
-    <section id="hero">
+    <section id="hero" class="reveal">
       <canvas id="starfield"></canvas>
       <div class="hero-glow"></div>
       <div class="hero-content">
@@ -72,7 +87,10 @@
           <img class="white2" src="img/trans-logo.png" alt="not found" />
         </div>
         <p class="hero-eyebrow2">
-          ayulduz<span class="textraper"><span class="blue_title">labs</span><span class="blue_title2">labs</span></span>
+          ayulduz<span class="textraper"
+            ><span class="blue_title">labs</span
+            ><span class="blue_title2">labs</span></span
+          >
         </p>
         <div
           class="blue_center"

@@ -11,14 +11,16 @@ function toggleLang() {
 }
 
 /* ── Starfield ── */
-(function () {
+function initStarfield() {
   const c = document.getElementById("starfield");
+  if (!c) return;
   const ctx = c.getContext("2d");
   let stars = [];
 
   function resize() {
     c.width = c.offsetWidth;
     c.height = c.offsetHeight;
+    if (c.width === 0 || c.height === 0) return;
     init();
   }
 
@@ -39,12 +41,12 @@ function toggleLang() {
 
   function draw() {
     ctx.clearRect(0, 0, c.width, c.height);
-    stars.forEach((s) => {
+    stars.forEach(function (s) {
       s.o += s.spd * s.dir;
       if (s.o > 0.65 || s.o < 0.05) s.dir *= -1;
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(106,173,255,${s.o})`;
+      ctx.fillStyle = "rgba(106,173,255," + s.o + ")";
       ctx.fill();
     });
     requestAnimationFrame(draw);
@@ -53,88 +55,106 @@ function toggleLang() {
   window.addEventListener("resize", resize);
   resize();
   draw();
-})();
+}
 
 /* ── Scroll Reveal ── */
-(function () {
+function initScrollReveal() {
   const els = document.querySelectorAll(".reveal");
   const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e, i) => {
+    function (entries) {
+      entries.forEach(function (e, i) {
         if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add("visible"), i * 80);
+          setTimeout(function () {
+            e.target.classList.add("visible");
+          }, i * 80);
           io.unobserve(e.target);
         }
       });
     },
-    { threshold: 0.08 },
+    { threshold: 0.08 }
   );
-  els.forEach((el) => io.observe(el));
-})();
-
-
-
-
-
-function revealElement(el) {
-  el.classList.remove("visible");
-
-  // force reflow
-  el.offsetHeight;
-
-  el.classList.add("visible");
+  els.forEach(function (el) { io.observe(el); });
 }
-//------------------------------------------------------------------
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
-  slidesPerView: 2,
-  spaceBetween: 15,
-  breakpoints: {
-    0: {
-      slidesPerView: 1,  // mobile
-    },
-    768: {
-      slidesPerView: 2,  // tablet and above — replace 768 with your breakpoint
-    },
-  },
-  on: {
-  init() {
-    animateVisibleSlides(this);
-  },
-  slideChangeTransitionEnd() {
-    animateVisibleSlides(this);
-  }
-},
-  
 
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false,
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+/* ── Swiper ── */
+function initSwiper() {
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 15,
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      init: function () { animateVisibleSlides(this); },
+      slideChangeTransitionEnd: function () { animateVisibleSlides(this); }
+    }
+  });
+}
 
 function animateVisibleSlides(swiper) {
-  // Remove visible from everything
-  swiper.slides.forEach((slide) => {
-    slide.querySelectorAll(".reveal").forEach((el) => {
+  swiper.slides.forEach(function (slide) {
+    slide.querySelectorAll(".reveal").forEach(function (el) {
       el.classList.remove("visible");
     });
   });
-
-  // Animate the two visible slides
   swiper.el
     .querySelectorAll(".swiper-slide-active, .swiper-slide-next")
-    .forEach((slide) => {
-      slide.querySelectorAll(".reveal").forEach((el) => {
+    .forEach(function (slide) {
+      slide.querySelectorAll(".reveal").forEach(function (el) {
         void el.offsetWidth;
         el.classList.add("visible");
       });
     });
-
 }
+
+/* ── Preloader ── */
+document.addEventListener("DOMContentLoaded", function () {
+  var preloader = document.getElementById("preloader");
+  var preloaderText = document.getElementById("preloader-text");
+  var text = 'Ay UlduzLabs';
+
+  preloaderText.innerHTML = "";
+
+  text.split("").forEach(function (char, index) {
+    var span = document.createElement("span");
+    span.textContent = char === " " ? "\u00A0" : char;
+    span.style.animationDelay = (index * 0.1) + "s";
+    preloaderText.appendChild(span);
+  });
+
+  var typingDuration = text.length * 100 + 1000;
+
+  var removed = false;
+  function removePreloader() {
+    if (removed) return;
+    removed = true;
+
+    preloaderText.classList.add("text-exit");
+
+    setTimeout(function () {
+      preloader.classList.add("fade-out");
+      // Init everything AFTER preloader is gone
+      initStarfield();
+      initScrollReveal();
+      initSwiper();
+    }, 800);
+  }
+
+  window.addEventListener("load", function () {
+    setTimeout(removePreloader, typingDuration);
+  });
+
+  // Fallback
+  setTimeout(removePreloader, typingDuration + 3000);
+});
