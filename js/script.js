@@ -89,7 +89,14 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   slidesPerView: 2,
   spaceBetween: 15,
-
+  breakpoints: {
+    0: {
+      slidesPerView: 1,  // mobile
+    },
+    768: {
+      slidesPerView: 2,  // tablet and above — replace 768 with your breakpoint
+    },
+  },
   on: {
   init() {
     animateVisibleSlides(this);

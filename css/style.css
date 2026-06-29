@@ -7,7 +7,7 @@
   --bg3: #0c2038;
   --bg4: #102840;
   --goodGrean: #128623;
-  --accent: #02cafd;
+  --accent: #02a1c9;
   --coolbtn: #093f82df;
   --accent2: #6aadff;
   --accent3: #a8ccff;
@@ -258,6 +258,13 @@ html[lang="fa"] .fa-inline {
   z-index: 2;
   filter: brightness(0) invert(1);
 }
+.white2 {
+  /* animation: whiteWipe 7s ease-in-out infinite; */
+  /* clip-path: inset(0 100% 0 0); */
+  /* position: absolute; */
+  /* z-index: 2; */
+  filter: brightness(0) invert(1);
+}
 
 @keyframes whiteWipe {
   0%   { clip-path: inset(0 100% 0 0); } /* hidden */
@@ -272,9 +279,59 @@ letter-spacing: 0.35em;
 text-transform: uppercase;
   color: var(--goodGrean);
   margin-bottom: 1rem;
+}
+@font-face {
+    font-family: "Quilon";
+    src: url("fonts/011c6c63f1c5303247573002f53613b4.woff2") format("woff2"),
+         url("fonts/011c6c63f1c5303247573002f53613b4.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.hero-eyebrow2 {
+  font-weight: 700;
+  font-size: 3rem;
+  box-sizing: border-box;
+  padding-bottom: 0;        /* removed the 30px gap */
+  margin-bottom: 0;         /* no bottom margin — blue line handles spacing */
+  color: white;
+  margin-top: -20px;
+  position: relative;
+}
+.textraper{
+  position: relative;
+}
+.blue_title{
+  color: #02cafd;
+  z-index: 2;
 
 }
+.blue_title2{
+  position: absolute;
+  margin-top:-8.9px ;
+    animation: whiteWipe 7s ease-in-out infinite;
+  top:0;
+  left:0;
+  
+  color:white;
+    /* animation: whiteWipe 7s ease-in-out infinite; */
 
+}
+.blue_center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.blue_line{
+  min-height: 0.2rem;
+  width: 3%;
+  border-radius: 35%;
+
+  min-width:32px;
+  min-height:2px;
+  background-color: #02cafd;
+}
 .hero-title {
   font-family: var(--ff-en);
   font-size: clamp(2.6rem, 6.5vw, 5rem);
@@ -297,7 +354,7 @@ html[lang="fa"] .hero-title {
   font-size: 1rem;
   color: var(--dim);
   max-width: 540px;
-  margin: 0 auto 2.2rem;
+  margin: 0 auto 1.2rem;
   font-weight: 300;
   line-height: 1.75;
 }
@@ -307,7 +364,7 @@ html[lang="fa"] .hero-title {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin-bottom: 2.6rem;
+  margin-bottom: 1.6rem;
 }
 .stack-pill {
   background: rgba(61, 142, 245, 0.07);
